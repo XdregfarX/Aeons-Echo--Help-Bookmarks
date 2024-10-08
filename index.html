@@ -1,1 +1,632 @@
-<h1>Github pages test</h1>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aeons Echo - Help Bookmarks</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            text-align: left; /* Cambiado a izquierda */
+        }
+
+        header {
+            background-color: #1e1e1e;
+            color: #f7d917;
+            padding: 1.5em 0;
+            font-size: 1.8em;
+            font-weight: bold;
+            text-align: center; /* Mantener centrado */
+            position: relative; /* Cambiado a relativo para alinear el icono */
+        }
+         
+          section {
+            display: none; /* Ocultar todas las secciones por defecto */
+            padding: 20px;
+            background-color: white;
+            margin: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .highlight-title {
+            color: #ff4500; /* Cambia este color al que prefieras */
+            font-size: 2em; /* Ajusta el tamaño de la fuente si es necesario */
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: center; /* Mantener centrado */
+        }
+
+        /* Estilos para el menú de hamburguesa */
+        .menu-icon {
+            font-size: 30px;
+            cursor: pointer;
+            position: absolute;
+            top: 10px;
+            right: 10px; /* Cambiado para alinear a la derecha */
+            color: #f7d917;
+        }
+
+        #mobile-menu {
+            background-color: #2c2c2c; /* Fondo más claro para el menú */
+            color: white;
+            position: absolute;
+            top: 50px;
+            right: 10px; /* Cambiado para alinear el menú a la derecha */
+            width: 200px;
+            padding: 10px;
+            border-radius: 5px;
+            display: none; /* Ocultar el menú inicialmente */
+        }
+
+        #mobile-menu a {
+            color: white;
+            text-decoration: none;
+            margin: 5px 0;
+            display: block; /* Para que cada enlace ocupe toda la línea */
+            padding: 8px 5px; /* Añadir un poco de padding para mejorar la apariencia */
+        }
+
+        #mobile-menu a:hover {
+            background-color: #333;
+            padding-left: 5px;
+        }
+
+        /* Línea de separación */
+        .divider {
+            border-bottom: 1px solid #f7d917; /* Color de la línea de separación */
+            margin: 5px 0; /* Espaciado alrededor de la línea */
+        }
+
+        .hidden {
+            display: none; /* Clase para ocultar elementos */
+        }
+    </style>
+    <script>
+        // Función para mostrar la sección seleccionada
+        function showSection(sectionId) {
+            // Ocultar todas las secciones
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                section.style.display = 'none'; // Oculta la sección
+            });
+
+            // Mostrar la sección seleccionada
+            const selectedSection = document.getElementById(sectionId);
+            selectedSection.style.display = 'block'; // Muestra la sección
+
+            // Ocultar el menú si se selecciona una sección
+            const menu = document.getElementById('mobile-menu');
+            menu.style.display = 'none'; // Oculta el menú
+        }
+
+        // Función para alternar el menú de hamburguesa
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.style.display = (menu.style.display === 'block') ? 'none' : 'block'; // Alterna la visibilidad del menú
+        }
+
+        // Muestra la sección inicial al cargar la página
+        window.onload = function() {
+            showSection('event-times'); // Cambia esto para mostrar una sección diferente por defecto
+        };
+    </script>
+</head>
+<body>
+    <header>
+        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+        Aeons Echo - Help Bookmarks
+    </header>
+
+    <nav id="mobile-menu" class="hidden">
+        <a href="javascript:void(0);" onclick="showSection('event-times')">Event Times</a>
+        <div class="divider"></div>
+        <a href="javascript:void(0);" onclick="showSection('best-value')">Best Value for Corona Stones & Arena Coins</a>
+        <div class="divider"></div>
+        <a href="javascript:void(0);" onclick="showSection('hypnos-skin-guide')">F2P Hypnos Skin Guide</a>
+        <div class="divider"></div>
+        <a href="javascript:void(0);" onclick="showSection('wishlist')">Aeons to Wishlist for</a>
+        <div class="divider"></div>
+        <a href="javascript:void(0);" onclick="showSection('twilight-guide')">Twilight of the Gods Unlock Guide</a>
+        <div class="divider"></div>
+        <a href="javascript:void(0);" onclick="showSection('server-info')">Server Zone Information</a>
+        <div class="divider"></div>
+        <a href="javascript:void(0);" onclick="showSection('fragment-evolve')">Fragment Evolve Requirements</a>
+    </nav>
+
+    <section id="event-times">
+        <h2 class="highlight-title">Event Times</h2>
+        <p><strong>General:</strong></p>
+        <ul>
+            <li>Daily Reset: 11:00:00</li>
+            <li>Stamina Supply Station (Lunch): 18:00:00 - 22:00:00</li>
+            <li>Stamina Supply Station (Dinner): 0:00:00 - 5:00:00</li>
+            <li>King's Clash (End of week): 3:45:00</li>
+        </ul>
+        <p><strong>Guild:</strong></p>
+        <p><strong>EU & Asia:</strong></p>
+        <ul>
+            <li>Galaxy Railway: 13:18:00 - 13:30:00</li>
+            <li>Gods Return: 13:30:00 - 13:40:00</li>
+            <li>Auction: 13:40:00 - 14:15:00</li>
+        </ul>
+        <p><strong>NA:</strong></p>
+        <ul>
+            <li>Galaxy Railway: 3:48:00 - 4:00:00</li>
+            <li>Gods Return: 4:00:00 - 4:10:00</li>
+            <li>Auction: 4:10:00 - 4:45:00</li>
+        </ul>
+    </section>
+
+
+    <section id="best-value">
+        <h2 class="highlight-title">Best Value for Corona Stones & Arena Coins</h2>
+        <p>If you got everything on the list that are available in your current progress of the game, then save your stones for the future. Don't waste them. Later in the game, you will be starving for more Corona Stones.</p>
+        <h3>Arena Coins</h3>
+        <ul>
+            <li>Star Compasses</li>
+            <li>Awakening Hammers (Can be skipped for Hypnos skin. Always buy after that)</li>
+            <li>Evil Destroying Crystal</li>
+            <li>SSR Goddesses Fragments (For Hypnos skin, stop after you got it)</li>
+            <li>Spend Red Arena Coins on Liba until 5 stars</li>
+        </ul>
+        <h3>Corona Store</h3>
+        <ul>
+            <li>Star Compasses</li>
+            <li>Titanium Steel (Not available for Steam players)</li>
+            <li>Transcendent Beast Cores</li>
+            <li>Evil Destroying Crystal (Buy 2 if you don't want to rely on luck for Hypnos skin)</li>
+            <li>Stamina cans</li>
+        </ul>
+        <h3>Auction</h3>
+        <ul>
+            <li>Proofs of Trial (The orange proofs can be skipped for Hypnos skin)</li>
+            <li>SR Goddess Fragments</li>
+        </ul>
+        <h3>Zodiac Twelve</h3>
+        <ul>
+            <li>Part 1: Goddess Fragments</li>
+            <li>Part 2: Abyssal Shards</li>
+        </ul>
+    </section>
+
+    <section id="hypnos-skin-guide">
+    <h2 class="highlight-title">F2P Hypnos Skin Guide</h2>
+    <p>(This is also a spending guide)</p>
+    <p>** Do not spend corona stones for any other event **</p>
+    <h3>Goals</h3>
+    <ul>
+        <li>Guild Store Level 4 (DO NOT UPGRADE RITUALS)</li>
+        <li>6 Beast Cores (for 1 Red Star on 3 Goddesses, 2 Red Stars on 2 Goddesses and a UR on 1 Goddess, you will need some rebirth to do all 3)</li>
+        <li>2 Exclusive Artifacts (this is guaranteed, but some lucky fellas might get 3)</li>
+        <li>a 5 stars Vulcan Artifact</li>
+        <li>600 Star Rating (you can get this by purchasing Random SR Spirits and reset hourglass)</li>
+        <li>20 Evil Destroying Crystals (for 2 hourglass skills at 4 stars) - however, if you know you can get 3 Exclusive Artifacts, you will only need 10 crystals</li>
+    </ul>
+    <h3>Corona Store</h3>
+    <ul>
+        <li>2 Star Compasses</li>
+        <li>5 Titanium Steels</li>
+        <li>1 Evil Destroying Crystal (stop buying IF you know you can get 3 Exclusive Artifacts by the end of the event)</li>
+        <li>Nutrient Solution (get 5 daily until level 65, only get the free one after that)</li>
+        <li>Free Gold Coins</li>
+    </ul>
+    <h3>Exchange Store</h3>
+    <ul>
+        <li>Star Compass</li>
+        <li>Evil Destroying Crystal</li>
+        <li>SSR Goddess Fragments (Stop buying after you've secured the skin)</li>
+        <li>2 Awakening Hammers (only buy after you have secured the skin)</li>
+        <li>Liba Fragment (only until she reaches SSR5, save the rest for Random SR Spirits)</li>
+        <li>Random SR Spirit</li>
+    </ul>
+    <h3>Auction</h3>
+    <ul>
+        <li>Proof of Trials (stop after the first orange upgrade and focus on Goddess Fragments instead)</li>
+        <li>SR Goddess Fragments (stop after you have secured the skin)</li>
+        <li>SSR Goddess Fragments (only do this if what you get from the Exchange Shop isn't going to be enough)</li>
+    </ul>
+    <h3>Zodiac Twelves</h3>
+    <ul>
+        <li>Part 1: Goddess Fragments</li>
+        <li>Part 2: Click once on any chest. **DO NOT SPEND CORONA STONES HERE**</li>
+    </ul>
+    <h3>Giant Armory</h3>
+    <ul>
+        <li>After defeating a thief (the green one), Buy the 300 gems deal daily. Buy more if that's not enough for the weekly quest that gives 5 Titanium Steel</li>
+    </ul>
+    <h3>City of the Endless Night</h3>
+    <ul>
+        <li>10 Star Keys for 10 Corona Stones whenever it appears</li>
+        <li>10 keys for 1600 Corona Stones can be bought once or twice if you need them for the Sphinx Skin, try not to don't buy more than 3 times</li>
+    </ul>
+</section>
+
+
+<section id="wishlist">
+    <h2 class="highlight-title">Aeons to Wishlist for</h2>
+    <p><strong>Main units:</strong></p>
+    <ul>
+        <li>Apollo is a late bloomer, fantastic late game for PVE, but you will fall slightly behind people who main some other units until mid game. She can work mid game as she can fit in any team, so it doesn't hurt much to main her early. However, she starts to fall off in late game PVP.</li>
+        <li>Dove is very powerful and requires minimal investment on other units, you can just focus solely on her and she can carry you to late game, however, she cannot overcome stats wall as easily as Heracles and Perseus combo. Not saying you can't have them all tho.</li>
+        <li>Hypnos is also a late bloomer who can be fantastic late game, I don't recommend investing in her right away as I've seen anyone who did it failed miserably, most of them quit before late game even happens. She requires many supports to make her viable.</li>
+    </ul>
+    <p><strong>Sub units:</strong></p>
+    <ul>
+        <li>Heracles is great for PVE and resources gathering, you can use her from ssr3, and she doesn't need higher than UR1, same goes for Perseus.</li>
+        <li>Perseus is free until UR1, and you don't need her higher than UR3.</li>
+        <li>Artemis is a powerful single unit who can help you a lot with 1v1 in Styx exploration, you don't need her higher than UR1.</li>
+        <li>Demeter needs UR3 to be consistent, but don't put her on wishlist unless you are rushing.</li>
+    </ul>
+    <p><strong>End game SR Aeons, don't rely on them until UR5 with artifact:</strong></p>
+    <ul>
+        <li>Offee is a powerful damage dealer who can wipe the enemies, but she needs other units to lead with the damage so she can snowball.</li>
+        <li>Asclepius is a very powerful healer who can also cleanse debuff.</li>
+        <li>Moana is a very tanky unit who can also support 2 flank units of her with mitigating damage, double the effectiveness in chaos team, she also supports with the crit rate if they're chaos.</li>
+    </ul>
+    <p><strong>Honorable mentions:</strong></p>
+    <ul>
+        <li>Eltanin is one of the most powerful damage dealers in the game, but she actually needs UR5 and artifact to shine.</li>
+        <li>Uruanna is a very flexible damage dealer and can fit well in almost any team, she can work even at SSR5.</li>
+    </ul>
+</section>
+
+
+<section id="twilight-guide">
+    <h2 class="highlight-title">Twilight of the Gods Unlock Guide</h2>
+    <p>Put all the best equipment on your solo fighter (Team 1). It will always be the hardest fight.</p>
+    <p>(The estimated power requirement is mainly for f2p, whales will not need as much power)</p>
+    <h3>Farbauti Normal</h3>
+    <p>Combat Power: 200k ~ 400k+</p>
+    <p>You want everyone in the teams to be 3 stars or more.</p>
+    <h3>Surtr Normal</h3>
+    <p>Combat Power: 700k ~ 900k+</p>
+    <p>Everyone in the teams should be 5 stars or more.</p>
+    <h3>Farbauti Hard</h3>
+    <p>Combat Power: Unknown</p>
+    <p>Just do it right after Surtr Normal, no need to change anything, this is far easier.</p>
+    <h3>Surtr Hard</h3>
+    <p>Combat Power: 1.2m ~ 1.6m</p>
+    <p>Ideally, everyone should be upgraded to SSR or higher, or at least SR for non-damage dealers.</p>
+    <h3>For minimum power (hardcore players)</h3>
+    <table border="1" cellspacing="0" cellpadding="5">
+        <tr>
+            <th>Team 1</th>
+            <th>Team 2</th>
+            <th>Team 3</th>
+        </tr>
+        <tr>
+            <td><strong>Pais</strong></td>
+            <td><strong>Biscult</strong></td>
+            <td><strong>Ruka</strong></td>
+        </tr>
+        <tr>
+            <td>Blank</td>
+            <td><strong>Areka</strong></td>
+            <td><strong>Perseus</strong></td>
+        </tr>
+        <tr>
+            <td>Blank</td>
+            <td>Blank</td>
+            <td><strong>Moana</strong></td>
+        </tr>
+        <tr>
+            <td>Blank</td>
+            <td>Blank</td>
+            <td>Blank</td>
+        </tr>
+        <tr>
+            <td>Blank</td>
+            <td>Blank</td>
+            <td>Blank</td>
+        </tr>
+    </table>
+    <h3>For recommended power (casual players)</h3>
+    <table border="1" cellspacing="0" cellpadding="5">
+        <tr>
+            <th>Team 1</th>
+            <th>Team 2</th>
+            <th>Team 3</th>
+        </tr>
+        <tr>
+            <td><strong>Perseus</strong></td>
+            <td><strong>Biscult</strong></td>
+            <td><strong>Offee</strong></td>
+        </tr>
+        <tr>
+            <td>Blank</td>
+            <td><strong>Areka</strong></td>
+            <td><strong>Demeter</strong></td>
+        </tr>
+        <tr>
+            <td>Blank</td>
+            <td>Blank</td>
+            <td><strong>Pais</strong></td>
+        </tr>
+        <tr>
+            <td>Blank</td>
+            <td>Blank</td>
+            <td>Blank</td>
+        </tr>
+        <tr>
+            <td>Blank</td>
+            <td>Blank</td>
+            <td>Blank</td>
+        </tr>
+    </table>
+</section>
+
+
+
+<section id="server-info">
+    <h2 class="highlight-title">Server Zone Information</h2>
+    <ul>
+     Servers are divided into 2 Zones, </li>
+        <li>Players within the same Zone are able to team up for Twilight of the Gods.</li>
+        <li>The bold outline separates the various King's Clash groupings.</li>
+        <li>With the exception of the first 15 Servers which were grouped up in 5s (S1-5) followed by 4s (S6-9) and then 3s (S10-12, S13-15), all subsequent servers are grouped up in 2s.</li>
+        <li>Players will matchmake into each other for King's Clash within these Groupings.</li>
+    </ul>
+    <img src="path_to_image.jpg" alt="Server Zone Information">
+</section>
+
+
+<section id="fragment-evolve">
+    <h2 class="highlight-title">Fragment Evolve Requirements</h2>
+    <h3>Aeons</h3>
+    <table border="1" cellspacing="0" cellpadding="5">
+        <tr>
+            <th>Stars</th>
+            <th>R</th>
+            <th>SR</th>
+            <th>SSR</th>
+            <th>Globes</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>10</td>
+            <td>20</td>
+            <td>40</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>30</td>
+            <td>60</td>
+            <td>60</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>60</td>
+            <td>90</td>
+            <td>120</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>90</td>
+            <td>120</td>
+            <td>180</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>150</td>
+            <td>180</td>
+            <td>240</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>SR</td>
+            <td>180</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>SSR</td>
+            <td>240</td>
+            <td>240</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>UR1</td>
+            <td>240</td>
+            <td>240</td>
+            <td>120</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>UR2</td>
+            <td>240</td>
+            <td>240</td>
+            <td>120</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>UR3</td>
+            <td>240</td>
+            <td>240</td>
+            <td>180</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>UR4</td>
+            <td>360</td>
+            <td>360</td>
+            <td>180</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>UR5</td>
+            <td>360</td>
+            <td>360</td>
+            <td>240</td>
+            <td>5</td>
+        </tr>
+    </table>
+    <h3>Goddess</h3>
+    <table border="1" cellspacing="0" cellpadding="5">
+        <tr>
+            <th>Stars</th>
+            <th>SR</th>
+            <th>SSR</th>
+            <th>Cores</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>30</td>
+            <td>60</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>60</td>
+            <td>60</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>90</td>
+            <td>120</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>120</td>
+            <td>180</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>150</td>
+            <td>240</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>SSR</td>
+            <td>150</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>R1</td>
+            <td>180</td>
+            <td>120</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>R2</td>
+            <td>240</td>
+            <td>180</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>UR0</td>
+            <td>240</td>
+            <td>180</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>UR1</td>
+            <td>300</td>
+            <td>240</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>UR2</td>
+            <td>360</td>
+            <td>300</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>UR3</td>
+            <td>480</td>
+            <td>360</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td>UR4</td>
+            <td>600</td>
+            <td>480</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>UR5</td>
+            <td>600</td>
+            <td>480</td>
+            <td>12</td>
+        </tr>
+    </table>
+    <h3>Elf & Antiques</h3>
+    <table border="1" cellspacing="0" cellpadding="5">
+        <tr>
+            <th>Stars</th>
+            <th>Elf</th>
+            <th>SSR</th>
+            <th>SR</th>
+            <th>R</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>60</td>
+            <td>40</td>
+            <td>20</td>
+            <td>10</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>120</td>
+            <td>120</td>
+            <td>40</td>
+            <td>20</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>240</td>
+            <td>200</td>
+            <td>80</td>
+            <td>40</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>360</td>
+            <td>320</td>
+            <td>160</td>
+            <td>80</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>480</td>
+            <td>480</td>
+            <td>320</td>
+            <td>160</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>600</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>720</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+    </table>
+</section>
